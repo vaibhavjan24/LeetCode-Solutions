@@ -3,7 +3,11 @@ class Solution:
         for i in range(len(letters)-1):
             if target<letters[i]:
                 return letters[i]
-        if letters[len(letters)-1]<target or letters[len(letters)-1]==target:
+#        if letters[len(letters)-1]<target or letters[len(letters)-1]==target:
+#            return letters[0]
+#        elif letters[len(letters)-1]>target:
+#            return letters[len(letters)-1]
+        if letters[-1]>target:
+            return letters[-1]
+        else:
             return letters[0]
-        elif letters[len(letters)-1]>target:
-            return letters[len(letters)-1]
